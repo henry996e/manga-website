@@ -6,10 +6,11 @@
   --dark-gray-bg: rgb(231, 231, 231);
   --main-text: #333;
   --gray-text: #9ca3af;
+  --important-buttons: #3577ff;
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /*ALWAYS USE THIS!!!!!!*/
   margin: 0;
   padding: 0;
 }
@@ -77,11 +78,12 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 /* MAIN BODY */
+
 .intro-box {
   background-color: var(--gray-bg);
   border-radius: 5px;
   height: max-content;
-  margin-top: 20px;
+  margin-top: 40px;
   padding: 60px 80px 60px 80px;
   text-align: center;
   transition: background-color ease-in 0.5s;
@@ -107,27 +109,71 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 17px;
 }
 
-.intro-box:default {
-  transition: none;
-}
-
 .intro-box:hover {
   background-color: var(--dark-gray-bg);
 }
 
+.intro-box-start {
+  background-color: var(--important-buttons);
+  border-radius: 5px;
+  padding: 15px;
+  width: fit-content;
+  position: relative;
+  bottom: 33px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin: 0 auto;
+  transition: border-radius ease-in 0.2s, box-shadow ease-in 0.2s;
+}
+
+.intro-box-start:hover {
+  border-radius: 20px;
+  box-shadow:  0 5px #2a61cf;
+}
+
+.intro-box-start:active {
+  background-color: #2a61cf;
+}
+
+.series-search {
+  background-color: var(--gray-bg);
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  transition: background-color ease-in 0.5s;
+  width: 500px;
+}
+
+.series-search input {
+  background-color: transparent;
+  font-size: 15px;
+}
+
+.series-search:hover {
+  background-color: var(--dark-gray-bg);
+}
+
+.featured {
+  padding-top: 40px;
+}
+
 /* FOOTER */
 
-.footer1 {
+.footer {
   border-top: 1px #dfdfdf solid;
   bottom: 0px;
   color: var(--gray-text);
   font-weight: 300;
   height: 75px;
-  position: absolute;
+  position: absolute; /*sticky when u need the footer stuck to the bottom*/
   width: 100%;
 }
 
-.footer1 .flex {
+.footer .flex {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
